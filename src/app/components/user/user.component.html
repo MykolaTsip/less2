@@ -1,0 +1,16 @@
+<div>
+ id: {{user.id}} <br>
+ name:  {{user.name}}  <br>
+ username: {{user.username}} <br>
+ email: {{user.email}}
+
+  <button (click)="showPostsOfUser(user.id)">show</button>
+</div>
+<div *ngIf="post">
+  <p *ngFor="let post of post">
+  {{post.id}} ---
+    {{post.userId}} ---
+    {{post.title}} ---
+    {{post.body}}
+  </p>
+</div>
